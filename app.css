@@ -1,0 +1,21 @@
+* {
+  background: rgb(176, 157, 157);
+  text-align: center;
+}
+
+h1 {
+  color: rgb(18, 16, 16);
+}
+
+li {
+  color: rgb(255, 255, 255);
+}
+
+button {
+  color: black;
+  background: rgb(19, 169, 180);
+}
+
+button:hover {
+  color: rgb(255, 255, 255);
+}

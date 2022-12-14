@@ -7,6 +7,8 @@
  * Your code goes here
  */
 
+const petList = document.querySelector("#pet-list");
+
 /* Deliverable # 2: .createElement()
  * Step 1 - Declare a variable called "newPet".
  * Step 2 - Use .createElement() to create a new li element and assign it as the value of the "newPet" variable.
@@ -16,17 +18,32 @@
  * Your code goes here
  */
 
+let newPet = document.createElement("li");
+
+/* Deliverable # 3:.appendChild()
+ * Step 1 - Declare a variable called "petList".
+
 // Deliverable # 3: .textContent - Change the textContent of "newPet" to any pet of your choosing (for example: "Guinea Pig")
 
 /*
  * Your code goes here
  */
 
+newPet.textContent = "Guinea Pig";
+
+/* Deliverable # 4:.appendChild()
+ * Step 1 - Declare a variable called "petList".
+
 // Deliverable # 4: .appendChild() - Use .appendChild() to append "newPet" (the new li element you created) to "petList" (the ol containing all of the pets).
 
 /*
  * Your code goes here
  */
+
+petList.appendChild(newPet);
+
+/* Deliverable # 5:.querySelector()
+ * Step 1 - Declare a variable called "petList"
 
 /* Deliverable # 5: .querySelectorAll()
  * Step 1 - Declare a variable called "divs".
@@ -36,6 +53,11 @@
 /*
  * Your code goes here
  */
+
+const divs = document.querySelectorAll("div");
+
+/* Deliverable # 6:.querySelector()
+ * Step 1 - Declare a variable called "divs"
 
 /* Deliverable # 6: .forEach()
  * Step 1 - Use .forEach() to iterate through each of the div elements contained inside of the "divs" variable.
@@ -50,6 +72,17 @@
  * Your code goes here
  */
 
+divs.forEach((div) => {
+  const copyrightElement = document.createElement("h2");
+  copyrightElement.textContent = "© 2022 SEB";
+  div.appendChild(copyrightElement);
+});
+
+/* Deliverable # 7:.querySelector()
+ * Step 1 - Declare a variable called "divs"
+
+
+
 /* Deliverable # 7: .getElementById()
  * Step 1 - Declare a variable called "notAShop".
  * Step 2 - Use .getElementById() to search for the element with the id of 'not-a-shop' and assign it as the value of the "notAShop" variable.
@@ -59,6 +92,11 @@
  * Your code goes here
  */
 
+const notAShop = document.getElementById("not-a-shop");
+
+/* Deliverable # 8:.querySelector()
+ * Step 1 - Declare a variable called "notAShop"
+
 /* Deliverable # 8: .remove()
  * Step 1 - Use .remove() to remove the element with the id of 'not-a-shop' from the DOM. You already have a variable named "notAShop" that references this element.
  */
@@ -66,6 +104,8 @@
 /*
  * Your code goes here
  */
+
+notAShop.remove();
 
 /* Deliverable # 9: .getElementsByClassName()
  * Step 1 - Declare a variable called "shops".
@@ -75,6 +115,13 @@
 /*
  * Your code goes here
  */
+
+const shops = document.getElementsByClassName("shop");
+
+/* Deliverable # 10:.getElementsByClassName()
+ * Step 1 - Declare a variable called "shops"
+
+/* Deliverable # 10:.getElementsByClassName()
 
 /* Deliverable # 10: while loop
  * Step 1 - Declare a variable called "counter" using let and initialize "counter" with a value of 0.
@@ -90,8 +137,33 @@
  * Your code goes here
  */
 
+let counter = 0;
+while (counter < shops.length) {
+  const button = document.createElement("button");
+  button.textContent = "Like This Shop";
+  shops[counter].appendChild(button);
+  counter++;
+}
+
 // Bonus Deliverable: Finish creating the Candy Shop! There is already a div with the id of "candy-shop" currently set up for you.
 
 /*
  * Your code goes here
  */
+
+const candyShop = document.getElementById("candy-shop");
+
+const candyHeader = document.createElement("h1");
+
+candyHeader.textContent = "Candy Shop";
+candyShop.appendChild(candyHeader);
+
+/* Bonus Deliverable: Finish creating the Candy Shop! There is already a div with the id of "candy-shop" currently set up for you.
+ */
+
+let candies = ["Lolipop", "Sour patch", "candy cranes"];
+candies.forEach((candy) => {
+  const candyList = document.createElement("li");
+  candyList.textContent = candy;
+  candyShop.appendChild(candyList);
+});

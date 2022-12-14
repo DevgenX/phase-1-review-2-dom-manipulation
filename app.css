@@ -1,10 +1,11 @@
 * {
-  background: rgb(176, 157, 157);
+  background: rgb(106, 102, 102);
   text-align: center;
 }
 
 h1 {
-  color: rgb(18, 16, 16);
+  color: rgb(82, 46, 46);
+  position: relative;
 }
 
 li {
